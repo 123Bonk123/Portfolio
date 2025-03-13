@@ -1,0 +1,12 @@
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Pavel\Desktop\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Pavel\Desktop\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Pavel\Desktop\WinForm\Тетрис\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

@@ -1,0 +1,8 @@
+sizeBlock = 20;
+            if (включитьНастройкиToolStripMenuItem.Checked == false)
+            {
+                Size = new Size(size * sizeBlock + 21, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+                /*groupBox1.Location = new Point(size * sizeBlock + 18, 27);
+                groupBox2.Location = new Point(size * sizeBlock + 18, 200);*/
+            }

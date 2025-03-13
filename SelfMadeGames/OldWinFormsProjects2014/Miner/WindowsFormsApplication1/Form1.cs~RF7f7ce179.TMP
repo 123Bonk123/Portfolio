@@ -1,0 +1,392 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        int size = 10;
+        int sizeBlock = 30;
+        int xBlock, yBlock;
+        int[,] area;
+        bool[,] open;
+        bool[,] flag;
+        Label[,] labels;
+        Brush closeColor;
+        Color openColor;
+        Color valueColor;
+        Pen lineColor;
+
+        public Form1()
+        {
+            InitializeComponent();
+            radioButton2.Checked = true;
+            area = new int[size, size];
+            open = new bool[size, size];
+            flag = new bool[size, size];
+            labels = new Label[size, size];
+            valueColor = Color.Red;
+            closeColor = Brushes.Gray;
+            openColor = Color.LightGray;
+            lineColor = Pens.Blue;
+            включитьНастройкиToolStripMenuItem.Checked = false;
+            radioButton8.Checked = true;
+            Size = new Size(321, Size.Height);
+            mineSetter();           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < size; i++)
+                for (int j = 0; j < size; j++)
+                {
+                    open[i, j] = false;
+                    flag[i, j] = false;
+                }
+            
+        }
+
+        private void mineSetter()
+        {
+            Random rand = new Random();
+            for (int i = 0; i < size; i++)
+                for (int j = 0; j < size; j++)
+                        area[i, j] = 0;
+            for(int i = 0; i < size; i++)
+            {
+                int x, y;
+                do
+                {
+                    x = rand.Next(size);
+                    y = rand.Next(size);
+                } while (area[x, y] == 10);
+                area[x, y] = 10;
+            }
+
+
+            for (int i = 0; i < size; i++)
+                for (int j = 0; j < size; j++)
+                    if (area[i, j] == 10)
+                        valueSetter(i-1, j-1);
+
+        }
+
+        private void openZero(int i, int j)
+        {
+            if ((i >= 0) && (i < size))
+                if ((j >= 0) && (j < size))
+                    // проверим, не было ли открыто поле раньше
+                    if (open[i, j] == false)
+                    {
+                        // откроем
+                        open[i, j] = true;
+                        // если поле пустое (=0), просто пооткрываем всех его соседей
+                        if (area[i, j] == 0)
+                        {
+                            if (border(i + 1, j)) openZero(i + 1, j);
+                            if (border(i + 1, j - 1)) openZero(i + 1, j - 1);
+                            if (border(i + 1, j + 1)) openZero(i + 1, j + 1);
+                            if (border(i - 1, j - 1)) openZero(i - 1, j - 1);
+                            if (border(i - 1, j)) openZero(i - 1, j);
+                            if (border(i - 1, j + 1)) openZero(i - 1, j + 1);
+                            if (border(i, j - 1)) openZero(i, j - 1);
+                            if (border(i, j + 1)) openZero(i, j + 1);
+                        }
+                    }
+        }
+        bool border(int i, int j)
+        {
+            if (i < 0 || i >= size || j < 0 || j >= size)
+                return false;
+            return true;
+        }
+
+        private void valueSetter(int x, int y)
+        {
+            for (int i = x; i < x + 3; i++)
+                for (int j = y; j < y + 3; j++)
+                {
+                    if (i < 0 || j < 0 || i > size - 1 || j > size - 1)
+                        continue;
+                    if (area[i, j] != 10)
+                        area[i, j]++;
+                }
+            labelsSetter();
+        }
+
+        void labelsSetter()
+        {
+            for (int i=0; i < size; i++)
+                for (int j=0; j < size; j++)
+                {
+                    labels[i, j] = new Label()
+                    {
+                        Location = new Point(panel1.Location.X + i * sizeBlock + 1, panel1.Location.Y + j * sizeBlock + 1),
+                        Width = sizeBlock,
+                        Height = sizeBlock,
+                        Text = area[j, i].ToString(),
+                        Visible = false,
+                        ForeColor = valueColor,
+                        Enabled = true,
+                        BackColor = openColor,
+                        TextAlign = ContentAlignment.MiddleCenter
+                    };
+                    Controls.Add(labels[i, j]);
+                }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+            labelsSetter();
+            draw_area();
+
+            Rectangle border = new Rectangle(0, 0, sizeBlock * size, sizeBlock * size);
+
+            panel1.CreateGraphics().DrawRectangle(Pens.Blue, border);
+
+            for (int i = 0; i < size; i++)
+            {
+                panel1.CreateGraphics().DrawLine(lineColor, 0, i * sizeBlock, size * sizeBlock, i * sizeBlock);
+                panel1.CreateGraphics().DrawLine(lineColor, i * sizeBlock, 0, i * sizeBlock, size * sizeBlock);
+            }
+            theEnd();
+        }
+        private void draw_area()
+        {
+            
+            for (int i = 0; i < size; i++)
+                for (int j = 0; j < size; j++)
+                {
+                    if(open[i, j] == false)
+                    {
+                        Rectangle r = new Rectangle(j * sizeBlock, i * sizeBlock, sizeBlock, sizeBlock);
+                        panel1.CreateGraphics().FillRectangle(closeColor, r);
+                    }
+                    else
+                    {
+                        labels[j, i].Visible = true;
+                        labels[j, i].BringToFront();
+                    }
+                    if(flag[i, j] == true)
+                    {
+                        Rectangle r = new Rectangle(j * sizeBlock, i * sizeBlock, sizeBlock, sizeBlock);
+                        panel1.CreateGraphics().FillRectangle(Brushes.DarkRed, r);
+                    }
+                    else
+                    {
+                        Rectangle r = new Rectangle(j * sizeBlock, i * sizeBlock, sizeBlock, sizeBlock);
+                        panel1.CreateGraphics().FillRectangle(closeColor, r);
+                    }
+                }
+            
+        }
+
+        private void theEnd()
+        {
+            int count = 0;
+            for (int i = 0; i < size; i++)
+                for (int j = 0; j < size; j++)
+                    if (open[i, j] == true)
+                        count++;
+            if(count == size*size - size)
+            {
+                MessageBox.Show("ВЫ ВЫИГРАЛИ!!!");
+                Close();
+            }
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            xBlock = e.Y / sizeBlock;
+            yBlock = e.X / sizeBlock;
+            if(e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                openZero(xBlock, yBlock);
+            }
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                if (flag[xBlock, yBlock] == false)
+                    flag[xBlock, yBlock] = true;
+                else
+                    flag[xBlock, yBlock] = false;
+            }
+            if (e.Button == System.Windows.Forms.MouseButtons.Left && area[xBlock, yBlock] == 10)
+            {
+                for (int i = 0; i < size; i++)
+                    for (int j = 0; j < size; j++)
+                        if (area[i, j] == 10)
+                            open[i, j] = true;
+                panel1.Refresh();
+                MessageBox.Show("ВЫ ПОПАЛИ НА МИНУ!!!");
+                Close();
+            }
+            panel1.Refresh();
+
+        }
+
+        private void включитьНастройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(включитьНастройкиToolStripMenuItem.Checked == false)
+            {
+                включитьНастройкиToolStripMenuItem.Checked = true;
+                включитьНастройкиToolStripMenuItem.Text = "Выключить настройки";
+                Size = new Size(size * sizeBlock + 360, Size.Height);
+            }
+            else
+            {
+                включитьНастройкиToolStripMenuItem.Checked = false;
+                включитьНастройкиToolStripMenuItem.Text = "Включить настройки";
+                Size = new Size(size * sizeBlock + 21, Size.Height);
+            }
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = colorDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                SolidBrush sb = new SolidBrush(colorDialog1.Color);
+                closeColor = sb;
+                panel2.BackColor = colorDialog1.Color;
+                panel1.Refresh();
+            }
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = colorDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                openColor = colorDialog1.Color;
+                panel3.BackColor = colorDialog1.Color;
+                labelsSetter();
+                panel1.Refresh();
+            } 
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = colorDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                lineColor = new Pen(colorDialog1.Color);
+                panel4.BackColor = colorDialog1.Color;
+                panel1.Refresh();
+            }
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = colorDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                valueColor = colorDialog1.Color;
+                panel5.BackColor = colorDialog1.Color;
+                labelsSetter();
+                panel1.Refresh();
+            } 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            sizeBlock = 20;
+            if (включитьНастройкиToolStripMenuItem.Checked == false)
+            {
+                Size = new Size(size * sizeBlock + 21, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            else
+            {
+                Size = new Size(size * sizeBlock + 360, size * sizeBlock + 160);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            panel1.Refresh();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            sizeBlock = 30;
+            if (включитьНастройкиToolStripMenuItem.Checked == false)
+            {
+                Size = new Size(size * sizeBlock + 21, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }else
+            {
+                Size = new Size(size * sizeBlock + 360, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            panel1.Refresh();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            sizeBlock = 40;
+            if (включитьНастройкиToolStripMenuItem.Checked == false)
+            {
+                Size = new Size(size * sizeBlock + 21, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            else
+            {
+                Size = new Size(size * sizeBlock + 360, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            panel1.Refresh();
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            sizeBlock = 50;
+            if (включитьНастройкиToolStripMenuItem.Checked == false)
+            {
+                Size = new Size(size * sizeBlock + 21, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            else
+            {
+                Size = new Size(size * sizeBlock + 360, size * sizeBlock + 70);
+                panel1.Size = new Size(sizeBlock * size + 1, sizeBlock * size + 1);
+            }
+            panel1.Refresh();
+        }
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+            size = 10;
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            size = 12;
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            size = 15;
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            size = 20;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           DialogResult dr = MessageBox.Show("Игра начнется сначала", "Сохранение настроек", MessageBoxButtons.OKCancel);
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                mineSetter();
+                panel1.Refresh();
+            }
+        }
+
+    }
+}

@@ -1,0 +1,39 @@
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+Y:\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Dropbox\AFAR\!Работа\TEMP\Программисты\3 курс\Науменко Павел\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Pavel\Desktop\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Pavel\Desktop\Prog\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Pavel\Desktop\Prog\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Pavel\Desktop\Prog\WinForm\Итоговая работа\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
