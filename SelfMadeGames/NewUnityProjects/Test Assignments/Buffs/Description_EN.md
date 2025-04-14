@@ -8,7 +8,8 @@ This document describes a project completed as part of a test assignment in Unit
 
 The project includes a capsule that offers the player a choice of three different buffs. The buffs affect the character's attributes and can be stacked multiple times. The player can interact with the capsule by entering its area of effect and pressing the E key, then clicking on the desired buff with the mouse.
 
-<video controls src="Demonstration-1.mp4" title="Title"></video>
+![image](https://github.com/user-attachments/assets/7ddaad55-4679-4bd4-bf69-68130d886607)
+
 
 ▎3. Main Components
 
